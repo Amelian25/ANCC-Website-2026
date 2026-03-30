@@ -697,6 +697,20 @@ footer {
 
 .about-text .eyebrow { margin-bottom: 1.5rem; }
 
+.approach-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.investment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
 .about-text h2 {
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -1138,6 +1152,16 @@ footer {
   }
 
   .about-split {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .investment-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
