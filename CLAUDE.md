@@ -58,7 +58,7 @@ All images live in `images/`. `.about-portrait` has `pointer-events: none` to pr
 - Active nav link highlighting based on `window.location.pathname`
 - Nav scroll shadow on scroll
 - Scroll-reveal fade-in via `IntersectionObserver` on any element with `[data-reveal]`
-- Contact form simulated submit (no backend; `id="contactForm"`, success message `id="formSuccess"`)
+- Contact form submission via Formspree (`https://formspree.io/f/xreoqdjj`) — submits via `fetch`, shows success message `id="formSuccess"` on success, shows error alert with email fallback on failure
 
 ### Responsive breakpoints
 - `≤ 1024px` — Switches most two-column grids to single column; stacks service blocks; hero portrait stacks below text (badge hidden)
@@ -107,9 +107,15 @@ All images live in `images/`. `.about-portrait` has `pointer-events: none` to pr
 - **Personality assessments bullet** — consider adding an optional bullet about MBTI/Enneagram assessments to the includes list on both Service 01 (1:1 Leadership Coaching) and Service 02 (Life & Career Coaching)
 - **Portrait photos** — current portraits are older photos; replace with professional headshots when available
 - **Standalone Sessions image** — current photo (workshop room with city view) is acceptable but may be replaced with something better
-- **Hosting** — next step; site is ready to go live as static HTML on `amelianorvell.com`
+
+## Hosting
+- **Live at** `amelianorvell.com`
+- **Host:** GitHub Pages — repository `github.com/Amelian25/ANCC-Website-2026`, main branch
+- **Domain:** registered with Squarespace, DNS pointing to GitHub Pages
+- **To deploy changes:** edit files locally, then upload changed files to the GitHub repo via Add file → Upload files → Commit to main branch. Changes go live within a minute or two.
+- **Contact form:** handled by Formspree (`https://formspree.io/f/xreoqdjj`), submissions delivered to `amelia@amelianorvell.com`
+- **Email:** Google Workspace billed through Squarespace — do not cancel Squarespace entirely, only the hosting plan was cancelled
 
 ## Notes
 - Amelia prefers no em dashes in copy; use commas, colons, or periods depending on context
 - Do not publish phone number
-- `amelianorvell.com` domain should be used for hosting
