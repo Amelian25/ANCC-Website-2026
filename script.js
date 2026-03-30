@@ -87,7 +87,7 @@ document.head.appendChild(style);
    ============================================================ */
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = contactForm.querySelector('button[type="submit"]');
     const msg = document.getElementById('formSuccess');
@@ -96,15 +96,27 @@ if (contactForm) {
     btn.textContent = 'Sending…';
     btn.disabled = true;
 
-    setTimeout(() => {
-      btn.textContent = original;
-      btn.disabled = false;
-      if (msg) msg.classList.add('show');
-      contactForm.reset();
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
 
-      setTimeout(() => {
-        if (msg) msg.classList.remove('show');
-      }, 5000);
-    }, 1200);
+      if (response.ok) {
+        if (msg) msg.classList.add('show');
+        contactForm.reset();
+        setTimeout(() => {
+          if (msg) msg.classList.remove('show');
+        }, 5000);
+      } else {
+        alert('Something went wrong. Please try again or email amelia@amelianorvell.com directly.');
+      }
+    } catch {
+      alert('Something went wrong. Please try again or email amelia@amelianorvell.com directly.');
+    }
+
+    btn.textContent = original;
+    btn.disabled = false;
   });
 }
