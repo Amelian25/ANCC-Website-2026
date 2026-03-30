@@ -1144,7 +1144,14 @@ footer {
 
   .hero-visual { display: block; }
   .hero-portrait { aspect-ratio: 3/4; max-height: 600px; }
-  .hero-badge { display: none; }
+  .hero-badge {
+    position: static;
+    bottom: auto;
+    left: auto;
+    max-width: 100%;
+    margin-top: 1.5rem;
+    box-shadow: none;
+  }
 
   .intro-strip-inner {
     grid-template-columns: 1fr;
