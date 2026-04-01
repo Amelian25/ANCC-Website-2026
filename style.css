@@ -406,7 +406,7 @@ nav {
   aspect-ratio: 3/4;
   max-height: 680px;
   object-fit: cover;
-  object-position: top;
+  object-position: center 15%;
 }
 
 .hero-badge {

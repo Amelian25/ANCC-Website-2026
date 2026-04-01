@@ -40,7 +40,7 @@ Every page duplicates the same `<nav>`, `.mobile-nav` overlay, and `<footer>` ma
 All images live in `images/`. `.about-portrait` has `pointer-events: none` to prevent the sticky element from blocking text selection in the hero above it. The About page Approach section uses a client quote block in place of an image — a photo can go there when available.
 
 #### Portrait responsive behavior
-- **Hero portrait** (`index.html`): visible at all widths. At ≤1024px, stacks below hero text in single-column layout. Uses `aspect-ratio: 3/4`, `object-fit: cover`, `object-position: top`.
+- **Hero portrait** (`index.html`): visible at all widths. At ≤1024px, stacks below hero text in single-column layout. Uses `aspect-ratio: 3/4`, `object-fit: cover`, `object-position: center 15%` (anchored 15% from top to keep face in frame at medium widths).
 - **Hero badge** (`index.html`): on desktop, absolutely positioned over the bottom-left of the portrait. At ≤1024px, switches to `position: static` and stacks below the portrait image (no drop shadow). Does not disappear on mobile.
 - **About portrait** (`about.html`): sticky on desktop scroll. At ≤1024px, switches to `position: static`, `max-width: 420px`, centered. Uses `aspect-ratio: 3/4`, `object-fit: cover`, `object-position: top`.
 
